@@ -196,11 +196,13 @@ export default class DeskreenApp {
               nodeIntegration: true,
 	      enableRemoteModule: true,
 	      contextIsolation: true,
+	      sandbox: true,
             }
           : {
               preload: path.join(__dirname, 'dist/mainWindow.renderer.prod.js'),
               enableRemoteModule: true,
 	      contextIsolation: true,
+	      sandbox: true,
             },
     });
 

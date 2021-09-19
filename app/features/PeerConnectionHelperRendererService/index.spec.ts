@@ -42,6 +42,8 @@ const testBrowserWindowParams = {
       ? {
           nodeIntegration: true,
           enableRemoteModule: true,
+	  contextIsolation: true,
+	  sandbox: true,
         }
       : {
           preload: path.join(
@@ -49,6 +51,8 @@ const testBrowserWindowParams = {
             'dist/peerConnectionHelperRendererWindow.renderer.prod.js'
           ),
           enableRemoteModule: true,
+	  contextIsolation: true,
+	  sandbox: true,
         },
 };
 

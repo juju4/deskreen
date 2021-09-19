@@ -36,6 +36,8 @@ export default class RendererWebrtcHelpersService {
           ? {
               nodeIntegration: true,
               enableRemoteModule: true,
+	      contextIsolation: true,
+	      sandbox: true,
             }
           : {
               preload: path.join(
@@ -43,6 +45,8 @@ export default class RendererWebrtcHelpersService {
                 'dist/peerConnectionHelperRendererWindow.renderer.prod.js'
               ),
               enableRemoteModule: true,
+	      contextIsolation: true,
+	      sandbox: true,
             },
     });
 
