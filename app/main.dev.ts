@@ -194,11 +194,13 @@ export default class DeskreenApp {
         process.env.ERB_SECURE !== 'true'
           ? {
               nodeIntegration: true,
-              enableRemoteModule: true,
+	      enableRemoteModule: true,
+	      contextIsolation: true,
             }
           : {
               preload: path.join(__dirname, 'dist/mainWindow.renderer.prod.js'),
               enableRemoteModule: true,
+	      contextIsolation: true,
             },
     });
 
